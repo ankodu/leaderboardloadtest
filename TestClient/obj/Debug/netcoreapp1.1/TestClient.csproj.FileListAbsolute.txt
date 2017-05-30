@@ -6,3 +6,4 @@ C:\dev\leaderboardloadtest\TestClient\bin\Debug\netcoreapp1.1\TestClient.pdb
 C:\dev\leaderboardloadtest\TestClient\obj\Debug\netcoreapp1.1\TestClient.AssemblyInfo.cs
 C:\dev\leaderboardloadtest\TestClient\obj\Debug\netcoreapp1.1\TestClient.dll
 C:\dev\leaderboardloadtest\TestClient\obj\Debug\netcoreapp1.1\TestClient.pdb
+C:\dev\leaderboardloadtest\TestClient\obj\Debug\netcoreapp1.1\TestClient.csprojResolveAssemblyReference.cache

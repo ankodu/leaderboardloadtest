@@ -3,6 +3,10 @@
 
 using System;
 using TestClient.Utils;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.Azure.Documents.Client;
+
 
 namespace TestClient
 {
@@ -12,7 +16,8 @@ namespace TestClient
         {
             Title = "Nether Leaderboard Test Client - Main Menu";
 
-            MenuItems.Add('1', new ConsoleMenuItem("Setup ...", Setup));
+           // MenuItems.Add('1', new ConsoleMenuItem("Setup ...", Setup));
+            MenuItems.Add('1', new ConsoleMenuItem("Setup ...", () => { new SetupMenu().Show(); }));
             //MenuItems.Add('2', new ConsoleMenuItem("Send Typed Game Events ...", () => { new SendTypedGameEventMenu().Show(); }));
             //MenuItems.Add('3', new ConsoleMenuItem("Send Custom Game Event", SendCustomGameEvent));
             //MenuItems.Add('4', new ConsoleMenuItem("Re-send Last Sent Message", ResendLastSentMessage));

@@ -4,11 +4,22 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using Microsoft.Azure.Documents.Client;
+
+
 
 namespace TestClient
 {
     class Program
     {
+
+        //private static string DatabaseId;
+        //private static string CollectionId;
+        //private static string endpointUrl;
+        //private static string authorizationKey;
+
+
+
         static void Main(string[] args)
         {
             SetupCultureInfo();
@@ -19,8 +30,7 @@ namespace TestClient
             new MainMenu().Show();
 
             Console.WriteLine("Closing client");
-            Console.Read();
-        }
+         }
 
         private static void SetupCultureInfo()
         {
@@ -57,7 +67,13 @@ namespace TestClient
             //var ingestEventHubConnectionString = Environment.GetEnvironmentVariable("NETHER_INGEST_EVENTHUB_CONNECTIONSTRING");
             //var ingestEventHubName = Environment.GetEnvironmentVariable("NETHER_INGEST_EVENTHUB_NAME");
 
-            //SetupMenu.ShowCurrentConfig();
+            ConfigCache.DatabaseId = "nether";
+            ConfigCache.CollectionId = "leaderboard";
+            ConfigCache.endpointUrl = "https://netherleaderboard.documents.azure.com:443/";
+            ConfigCache.authorizationKey = "0pInTrncWxOXA0Itx03RovRyPvElq8BPFAQk0flM1T0CFhxORW8UZzMdh11B7s9bYMSS6CEDo4ZDTM9NJP7clw==";
+
+
+            SetupMenu.ShowCurrentConfig();
         }
 
     }
